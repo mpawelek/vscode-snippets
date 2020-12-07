@@ -1,0 +1,202 @@
+{
+	// Place your snippets for xml here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"deps": {
+		"prefix": "deps",
+		"body": [
+			"<dependencies>",
+			"\t$1",
+			"</dependencies>"
+		]
+	},
+	"props": {
+		"prefix": "props",
+		"body": [
+			"<properties>",
+			"\t<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>",
+			"\t<maven.compiler.source>12</maven.compiler.source>",
+			"\t<maven.compiler.target>12</maven.compiler.target>",
+			"</properties>",
+		]
+	},
+	"pom": {
+		"prefix": "pom",
+		"body": [
+			"<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+			"<project xmlns=\"http://maven.apache.org/POM/4.0.0\"",
+			"\t\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+			"\t\txsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">",
+			"\t<modelVersion>4.0.0</modelVersion>",
+			"\t<packaging>jar</packaging>",
+			"\t$1",
+			"</project>"
+		]
+	},
+	"spring-boot-dependencies": {
+		"prefix": "spring-boot-dependencies",
+		"body": [
+			"<dependencyManagement>",
+			"\t<dependencies>",
+			"\t\t<dependency>",
+			"\t\t\t<groupId>org.springframework.boot</groupId>",
+			"\t\t\t<artifactId>spring-boot-dependencies</artifactId>",
+			"\t\t\t<version>2.0.5.RELEASE</version>",
+			"\t\t\t<type>pom</type>",
+			"\t\t\t<scope>import</scope>  ",
+			"\t\t</dependency>",
+			"\t</dependencies>",
+			"</dependencyManagement>",
+		]
+	},
+	"spring-boot-starter-web": {
+		"prefix": "spring-boot-starter-web",
+		"body": [
+			"<dependency>",
+            "\t<groupId>org.springframework.boot</groupId>",
+            "\t<artifactId>spring-boot-starter-web</artifactId>",
+        	"</dependency>"
+		]
+	},
+	"spring-boot-starter-data-jpa": {
+		"prefix": "spring-boot-starter-data-jpa",
+		"body": [
+			"<dependency>",
+			"\t<groupId>org.springframework.boot</groupId>",
+			"\t<artifactId>spring-boot-starter-data-jpa</artifactId>",
+			"\t<exclusions>",
+			"\t\t<exclusion>",
+			"\t\t\t<groupId>org.hibernate</groupId>",
+			"\t\t\t<artifactId>hibernate-entitymanager</artifactId>",
+			"\t\t</exclusion>",
+			"\t\t<exclusion>",
+			"\t\t\t<groupId>org.hibernate</groupId>",
+			"\t\t\t<artifactId>hibernate-core</artifactId>",
+			"\t\t</exclusion>",
+			"\t</exclusions>",
+			"</dependency>",
+		]
+	},
+	"eclipse.persistence.jpa": {
+		"prefix": "org.eclipse.persistence.jpa",
+		"body": [
+			"<dependency>",
+			"\t<groupId>org.eclipse.persistence</groupId>",
+			"\t<artifactId>org.eclipse.persistence.jpa</artifactId>",
+			"\t<version>2.7.3</version>",
+			"</dependency>",
+		]
+	},
+	"postgres": {
+		"prefix": "postgres",
+		"body": [
+			"<dependency>",
+			"\t<groupId>org.postgresql</groupId>",
+			"\t<artifactId>postgresql</artifactId>",
+			"\t<version>42.2.5</version>",
+			"</dependency>",
+		]
+	},
+	"spring-boot-starter-test": {
+		"prefix": "spring-boot-starter-test",
+		"body": [
+			"<dependency>",
+			"\t<groupId>org.springframework.boot</groupId>",
+			"\t<artifactId>spring-boot-starter-test</artifactId>",
+			"\t<scope>test</scope>",
+			"</dependency>",
+		]
+	},
+	"junit": {
+		"prefix": "junit",
+		"body": [
+			"<dependency>",
+			"\t<groupId>junit</groupId>",
+			"\t<artifactId>junit</artifactId>",
+			"\t<version>4.12</version>",
+			"\t<scope>test</scope>",
+			"</dependency>",
+		]
+	},
+	"jackson-dataformat-xml": {
+		"prefix": "jackson-dataformat-xml",
+		"body": [
+			"<dependency>",
+			"\t<groupId>com.fasterxml.jackson.dataformat</groupId>",
+			"\t<artifactId>jackson-dataformat-xml</artifactId>",
+			"</dependency>",
+		]
+	},
+	"maven-jar-plugin": {
+		"prefix": "maven-jar-plugin",
+		"body": [
+			"<plugin>",
+			"\t<groupId>org.apache.maven.plugins</groupId>",
+			"\t<artifactId>maven-jar-plugin</artifactId>",
+			"\t<version>3.1.0</version>",
+			"\t<configuration>",
+			"\t\t<archive>",
+			"\t\t\t<manifest>",
+			"\t\t\t\t<addClasspath>true</addClasspath>",
+			"\t\t\t\t<classpathPrefix>lib/</classpathPrefix>",
+			"\t\t\t\t<mainClass>$1</mainClass>",
+			"\t\t\t</manifest>",
+			"\t\t</archive>",
+			"\t</configuration>",
+			"</plugin>",
+		]
+	},
+	"maven-dpendency-plugin": {
+		"prefix": "maven-dependency-plugin",
+		"body": [
+			"<plugin>",
+			"\t<groupId>org.apache.maven.plugins</groupId>",
+			"\t<artifactId>maven-dependency-plugin</artifactId>",
+			"\t<version>3.1.1</version>",
+			"\t<executions>",
+			"\t\t<execution>",
+			"\t\t\t<id>copydeps</id>",
+			"\t\t\t<goals>",
+			"\t\t\t\t<goal>copy-dependencies</goal>",
+			"\t\t\t</goals>",
+			"\t\t\t<phase>prepare-package</phase>",
+			"\t\t</execution>",
+			"\t</executions>",
+			"\t<configuration>",
+			"\t\t<outputDirectory>${project.build.directory}/lib</outputDirectory>",
+			"\t</configuration>",
+			"</plugin>",
+		]
+	},
+	"exec-maven-plugin": {
+		"prefix": "exec-maven-plugin",
+		"body": [
+			"<plugin>",
+			"\t<groupId>org.codehaus.mojo</groupId>",
+			"\t<artifactId>exec-maven-plugin</artifactId>",
+			"\t<version>1.6.0</version>",
+			"\t<executions>",
+			"\t\t<execution>",
+			"\t\t\t<id>run</id>",
+			"\t\t\t<goals>",
+			"\t\t\t\t<goal>java</goal>",
+			"\t\t\t</goals>",
+			"\t\t\t<configuration>",
+			"\t\t\t\t<mainClass>$1</mainClass>",
+			"\t\t\t</configuration>",
+			"\t\t</execution>",
+			"\t</executions>",
+			"</plugin>",
+		]
+	}
+}
