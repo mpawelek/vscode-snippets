@@ -23,13 +23,13 @@
 	"props": {
 		"prefix": "props",
 		"body": [
-			"\t\t<properties>",
-			"\t\t\t<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>",
-			"\t\t\t<maven.compiler.source>12</maven.compiler.source>",
-			"\t\t\t<maven.compiler.target>12</maven.compiler.target>",
-			"\t\t\t<surefireJacocoAgent></surefireJacocoAgent>",
-			"\t\t\t<failsafeJacocoAgent></failsafeJacocoAgent>",
-			"\t\t</properties>",
+			"<properties>",
+			"\t<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>",
+			"\t<maven.compiler.source>12</maven.compiler.source>",
+			"\t<maven.compiler.target>12</maven.compiler.target>",
+			"\t<surefireJacocoAgent></surefireJacocoAgent>",
+			"\t<failsafeJacocoAgent></failsafeJacocoAgent>",
+			"</properties>",
 		]
 	},
 	"pom": {
