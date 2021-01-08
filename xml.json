@@ -110,7 +110,7 @@
 		]
 	},
 	"spring-boot-starter-test": {
-		"prefix": "spring-boot-starter-test",
+		"prefix": "test.spring-boot-starter-test",
 		"body": [
 			"\t\t<dependency>",
 			"\t\t\t<groupId>org.springframework.boot</groupId>",
@@ -125,12 +125,12 @@
 			"\t\t</dependency>",
 		]
 	},
-	"junit-jupiter-engine": {
-		"prefix": "junit-jupiter-engine",
+	"junit-jupiter": {
+		"prefix": "test.junit-jupiter",
 		"body": [
 			"<dependency>",
 			"\t<groupId>org.junit.jupiter</groupId>",
-			"\t<artifactId>junit-jupiter-engine</artifactId>",
+			"\t<artifactId>junit-jupiter</artifactId>",
 			"\t<version>5.7.0</version>",
 			"\t<scope>test</scope>",
 			"</dependency>",
