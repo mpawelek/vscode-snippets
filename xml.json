@@ -95,7 +95,7 @@
 			"<dependency>",
 			"\t<groupId>org.eclipse.persistence</groupId>",
 			"\t<artifactId>org.eclipse.persistence.jpa</artifactId>",
-			"\t<version>2.7.3</version>",
+			"\t<version>2.7.7</version>",
 			"</dependency>",
 		]
 	},
